@@ -1,12 +1,13 @@
 # Optic demo repository
-
-Clone this repository and follow the instructions below to understand how Optic helps you working with OpenAPI specification files.
+Try this demo repository to understand how Optic helps you work with OpenAPI specification files.
 
 ## Setup
-### Gitpod
-Open the project in Gitpod with [this link](gitpod.io/#https://github.com/opticdev/demo) and continue following the steps below in the pod's terminal.
+### Cloud
+Open the project in Gitpod with [this link](https://gitpod.io/#https://github.com/opticdev/demo) (open it in a new tab) and continue following the steps below in the pod's terminal.
 
 ### Local
+Alternatively you can run the project in your local environment.
+
 Clone this repository:
 ```
 git clone git@github.com:opticdev/demo.git optic-demo && cd optic-demo
@@ -47,19 +48,10 @@ Time to push the spec and visualize the documentation in the Optic webapp:
 optic spec push todo-api.yaml --web
 ```
 
-## Visualize changes in OpenAPI specifications
-Optic can let you visualize changes between two versions of an API specifications.
+## Visualize changes
+Optic can let you visualize changes between two versions of an API spec.
 
-Let's make a change to the todo API specification:
-
-**MacOS**
-```
-sed -i '' 's/in: query/in: path/' todo-api.yaml
-```
-**Unix**
-```
-sed -i 's/in: query/in: path/' todo-api.yaml
-```
+Let's make a change to the todo API specification. For instance you could replace `in: path` by `in: query` line 10 in `todo-api.yaml`.
 
 Then run optic diff. The `--web` flag lets Optic open the diff view in your browser:
 ```
@@ -67,9 +59,9 @@ optic diff todo-api.yaml --web
 ```
 
 ## Integrate with your CI
-Optic is ideally equiped to run in your CI.
+Optic is perfectly suited to run in your CI.
 
-Once in your own repository, run the following command and follow the wizard to start getting automatic docs and diff visualization for your pull request, and start enforcing company standards to your OpenAPI specification files:
+Once in your own repository, run the following command and follow the wizard to start getting automatic docs and diff visualization for your pull request and start enforcing company standards to your OpenAPI specification files:
 ```
 optic ci-setup
 ```
