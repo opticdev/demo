@@ -51,7 +51,7 @@ optic spec push todo-api.yaml --web
 ## Visualize changes
 Optic can let you visualize changes between two versions of an API spec.
 
-Let's make a change to the todo API specification. For instance you could replace `in: path` by `in: query` line 10 in `todo-api.yaml`.
+Let's make a change to the todo API specification. For instance you could set the limit parameter to required: change `required: false` for `required: true` line 13 of `todo-api.yaml`.
 
 Then run optic diff. The `--web` flag lets Optic open the diff view in your browser:
 ```
