@@ -1,0 +1,23 @@
+name: optic
+on:
+  pull_request:
+  push:
+
+jobs:
+  diff-all:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Log some env vars
+        run: echo $GITHUB_EVENT_PATH, $GITHUB_REPOSITORY, $GITHUB_SHA
+
+      - name: Log GH token
+        run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}; echo $GITHUB_TOKEN
+
+      - name: Log pr number
+        run: echo $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
+
+      - name: Log base ref
+        run: echo $GITHUB_BASE_REF
