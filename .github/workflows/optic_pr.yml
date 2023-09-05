@@ -1,7 +1,6 @@
 name: optic
 on:
   pull_request:
-  push:
 
 jobs:
   diff-all:
@@ -10,14 +9,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Log some env vars
-        run: echo $GITHUB_EVENT_PATH, $GITHUB_REPOSITORY, $GITHUB_SHA
+      - name: Install Optic
+        run: npm install --location global @useoptic/optic@0.49.7-2
 
-      - name: Log GH token
-        run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}; echo $GITHUB_TOKEN
-
-      - name: Log pr number
-        run: echo $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
-
-      - name: Log base ref
-        run: echo $GITHUB_BASE_REF
+      - name: Run Optic
+        run: OPTIC_ENV=staging OPTIC_TOKEN="oidMDU4MmI1YzQtNTQwMS00YjIxLWI2Y2ItMDFmNGU0ODlkYWI3.ZBWfGe1k1noEvGGcKTtJG.-_KL_7gZsqLqfetE7iLm4" GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} optic run --base "gitbranch:$GITHUB_BASE_REF" --comment
