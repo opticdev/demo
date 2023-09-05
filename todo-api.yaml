@@ -14,7 +14,7 @@ paths:
         - name: test
           in: cookie
           schema:
-            type: number
+            type: string
           required: false
       responses:
         '200':
@@ -29,6 +29,7 @@ paths:
                     items:
                       $ref: "#/components/schemas/TodoRead"
                 required:
+                  - todos
 components:
   schemas:
     TodoRead:
