@@ -24,7 +24,6 @@ paths:
                     items:
                       $ref: "#/components/schemas/TodoRead"
                 required:
-                  - todos
 components:
   schemas:
     TodoRead:
