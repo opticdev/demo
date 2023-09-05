@@ -12,6 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+
       - name: Install Optic
         run: npm install --location global @useoptic/optic@0.49.7-7
 
