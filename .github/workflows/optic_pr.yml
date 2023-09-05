@@ -2,10 +2,11 @@ name: optic
 on:
   pull_request:
   push:
-    - main
+    branches:
+      - 'main'
 
 jobs:
-  diff-all:
+  run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
