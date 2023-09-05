@@ -11,6 +11,11 @@ paths:
           schema:
             type: number
           required: false
+        - name: test
+          in: cookie
+          schema:
+            type: number
+          required: false
       responses:
         '200':
           description: ok
