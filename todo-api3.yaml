@@ -14,7 +14,7 @@ paths:
         - name: test
           in: header
           schema:
-            type: string
+            type: number
           required: false
       responses:
         '200':
