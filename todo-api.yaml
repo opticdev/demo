@@ -12,7 +12,7 @@ paths:
             type: number
           required: false
         - name: test
-          in: cookie
+          in: header
           schema:
             type: string
           required: false
