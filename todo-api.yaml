@@ -18,7 +18,7 @@ paths:
           required: false
       responses:
         '200':
-          description: ok
+          description: okay
           content:
             application/json:
               schema:
