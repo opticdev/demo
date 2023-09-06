@@ -1,0 +1,9 @@
+ruleset:
+  - naming:
+      required_on: added
+      requestHeaders: Capital-Param-Case
+      responseHeaders: param-case
+      properties: Capital-Param-Case
+      pathComponents:  param-case
+      queryParameters: snake_case
+  - breaking-changes
