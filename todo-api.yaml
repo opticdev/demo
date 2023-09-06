@@ -11,6 +11,11 @@ paths:
           schema:
             type: number
           required: false
+        - name: test
+          in: path
+          schema:
+            type: string
+          required: true
       responses:
         '200':
           description: okay

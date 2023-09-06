@@ -1,6 +1,6 @@
 ruleset:
   - naming:
-      required_on: added
+      required_on: always
       requestHeaders: Capital-Param-Case
       responseHeaders: param-case
       properties: Capital-Param-Case
