@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: TodoAPI
-  version: "1.1"
+  version: '1.1'
 paths:
   /todos:
     get:
@@ -27,7 +27,7 @@ paths:
                   todos:
                     type: array
                     items:
-                      $ref: "#/components/schemas/TodoRead"
+                      $ref: '#/components/schemas/TodoRead'
                 required:
                   - todos
 components:
@@ -44,7 +44,6 @@ components:
         example:
           type: string
           format: date-time
-          example: "2020-01-01T00:00:00.000Z"
+          example: '2020-01-01T00:00:00.000Z'
       required:
         - status
-        - created_at
