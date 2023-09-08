@@ -6,13 +6,13 @@ paths:
   /todos:
     get:
       parameters:
-        - name: limit
-          in: query
+        - name: new
+          in: header
           schema:
             type: number
           required: false
-        - name: test
-          in: path
+        - name: tDah
+          in: query
           schema:
             type: string
           required: true
@@ -46,6 +46,5 @@ components:
           format: date-time
           example: "2020-01-01T00:00:00.000Z"
       required:
-        - name
         - status
         - created_at
