@@ -16,4 +16,8 @@ jobs:
         run: npm install --location global @useoptic/optic
 
       - name: Run Optic
-        run: OPTIC_TOKEN=${{ secrets.OPTIC_TOKEN }} GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} optic run
+        env:
+          OPTIC_TOKEN: ${{ secrets.OPTIC_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPTIC_ENV: staging
+        run: optic run
